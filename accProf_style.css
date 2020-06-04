@@ -81,7 +81,7 @@ color: white;
 }
 
 #menu :link{
-
+  border-radius: 15px;
 font-family: 'Oswald', sans-serif;
 text-decoration: none;
 text-align: center;
