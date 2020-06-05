@@ -19,17 +19,43 @@
   <div class="area_msg">
         <table>
       <tr>
-      <td><span><h5>Jeremiah</h5> </span> <p>Olá isto eh um teste</p>  </td>
-      <td><span><h5>Josiah</h5> </span> <p>Olá isto eh um teste</p> </td>
+        <td><span><h5>Josiah</h5> </span> <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <div class="div_resp_btn">Responder Pergunta</div>
+        <div id="div_resp" class="resposta">
+        <form class="" action="duvidas.html" method="post">
+        <textarea id="text_resp" rows="8" cols="50"></textarea>
+        <button type="submit" id="btn_response" class="btn btn-primary centralizarTexto">Enviar</button>
+        </form>
+        </div>
+        </td>
+
+        <td><span><h5>Josiah</h5> </span> <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <div class="div_resp_btn">Responder Pergunta</div>
+        <div id="div_resp" class="resposta">
+        <form class="" action="duvidas.html" method="post">
+        <textarea id="text_resp" rows="8" cols="50"></textarea>
+        <button type="submit" id="btn_response" class="botaoEnviar" name="button">DIG DIG JOY</button>
+        </form>
+        </div>
+       </td>
+
       </tr>
+
     </table>
 
+</div>
   </div>
 
-<div class="linha_vert"></div>
+
 
 </div>
 
 </body>
-
+<script>
+  $(function(){
+  $(".div_resp_btn").click(function(){
+      $("#div_resp").addClass("resposta_visible");
+  });
+});
+</script>
 </html>
