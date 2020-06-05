@@ -14,7 +14,6 @@ img{
 .curso_infos{
   float:left;
   font-size: 15px;
-  font-style: italic;
   color: whitesmoke;
   margin-left: 20px;
 
@@ -22,10 +21,14 @@ img{
 .curso_infos label{
   font-weight:bold;
 }
+.curso_infos p{
+  text-align: left;
+}
+
 .curso_infos table tr td{
   background: rgba(0,0,0,0.5);
   border-collapse: collapse;
-  left: 10px;
+  position:relative;
 }
 .round-black-btn {
   font-weight: bold;

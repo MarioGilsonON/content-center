@@ -1,3 +1,65 @@
 body {
       background-image: url("quadroNegro.jpg");
 }
+
+.linha_vert{
+position: relative;
+  height: 100%;
+  width: 50px;
+  border-right: 1px solid rgba(200,120,120,1);
+  background-color:transparent;
+}
+.page_duvidas{
+  position:relative;
+  background:whitesmoke;
+  height: 350px;
+  width: 750px;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: auto;
+}
+
+.area_msg{
+  position: absolute;
+  left: 51px;
+  }
+
+.area_msg table tr td{
+    border-bottom: 1px solid rgba(120,120,255,1);
+    display:flex;
+    height: auto;
+    width: 400px;
+    background: transparent;
+  }
+  .area_msg table tr td span{
+    margin-left: 5px;
+    margin-top: 6px;
+  }
+.area_msg table tr td p{
+  border: whitesmoke 2px solid;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.area_msg table tr td button{
+  text-align:center;
+  display: flex;
+  float: left;
+  height: 50px;
+  width: 200px;
+  border-radius: 50px;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+
+
+.msg_author{
+
+  float:left;
+  font-weight: bold;
+}
+
+.btnResp{
+  display:none;
+  float:right;
+}
