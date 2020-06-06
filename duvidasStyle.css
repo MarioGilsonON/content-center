@@ -81,15 +81,17 @@ font-size: 15px;
 font-weight: lighter;
 }
 
-  .area_msg table tr td span{
+.area_msg table tr td span{
     margin-left: 5px;
     margin-top: 6px;
-  }
+}
+
 .area_msg table tr td p{
   border: whitesmoke 2px solid;
   margin-left: 10px;
   margin-top: 5px;
 }
+
 .area_msg table tr td button{
   text-align:center;
   display: flex;
@@ -101,8 +103,6 @@ font-weight: lighter;
   background-color: transparent;
 }
 
-
-
 .msg_author{
 
   float:left;
@@ -111,6 +111,9 @@ font-weight: lighter;
 
 .centralizarTexto{
   text-align: center;
+  text-shadow: 
+  font-size: 20px;
+  margin-left: 30px;
 }
 
 .btnResp{
