@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="anotacoesStyle.css">
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.show{
+  visibility: visible;
+}
+.hide{
+  visibility: hidden;
+}
+</style>
+
+
+</head>
+<body>
+
+<div class="container">
+
+
+  <h4 class="bg-info text-white" style="font-weight:bold; margin-top:10px;">Minhas anotações</h4>
+  <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01"> ○ </label>
+  </div>
+
+  <form id="form_notes" action="/allnotes" method="post">
+  <select class="custom-select" id="selectNotes">
+  <option value="new">nova note</option>
+  <option value="1">note_01</option>
+  <option value="2">note_02</option>
+  <option value="3">note_03</option>
+  </select>
+</div>
+<div class="form-group">
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+  <div class="input-group input-group-sm mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text tituloNova " id="labelTitle">Título da nova anotação</span>
+  </div>
+  <input type="text" id="newNoteTitle" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+</div>
+
+</div>
+  <button type="button" id="btnOk" name="button">ok</button>
+
+</form>
+
+</div>
+
+</body>
+<script>
+  $(function(){
+
+    $("#btnOk").click(function(){
+    if( document.getElementById('selectNotes').selectedOptions[0].value == "new"){
+      $("#newNoteTitle").removeClass("hide").addClass("show");
+      $("#labelTitle").removeClass("hide").addClass("show");
+    }else{
+      $("#newNoteTitle").removeClass("show").addClass("hide");
+        $("#labelTitle").removeClass("show").addClass("hide");
+    }
+    })
+  });
+</script>
+</html>

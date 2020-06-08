@@ -1,0 +1,44 @@
+<main>
+  <span class="d-block p-2 bg-dark text-info">> Welcome {{user.name}}</span>
+  <div class="btn-group" role="group" aria-label="Basic example">
+  <a href="/perfil">  <button type="button" class="btn btn-secondary">Perfil</button></a>
+  <a href="/adCurso">  <button type="button" class="btn btn-secondary">Adicionar Curso</button></a>
+  <a href="profCursos">  <button type="button" class="btn btn-secondary">Editar/Remover Curso</button></a>
+  <a href="/duvidas">  <button type="button" class="btn btn-secondary">Dúvidas</button></a>
+  </div>
+  <div id="mainFrame" style="margin:auto; background-color:grey; hight:70%; width:70%;">
+
+  </div>
+
+<script>
+    "use strict";
+        $(document).ready(function() {
+
+            function resizeNav() {
+                $(".menu").css({
+                    "height": window.innerHeight
+                });
+                var radius = Math.sqrt(Math.pow(window.innerHeight, 2) + Math.pow(window.innerWidth, 2));
+                var diameter = radius * 2;
+                $(".nav-layer").width(diameter);
+                $(".nav-layer").height(diameter);
+                $(".nav-layer").css({
+                    "margin-top": -radius,
+                    "margin-left": -radius
+                });
+            }
+            $(".nav-toggle").click(function() {
+                $(".nav-toggle, .nav-layer, .menu").toggleClass("open");
+            });
+            $(window).resize(resizeNav);
+            resizeNav();
+
+            tl = new TimelineMax({
+                yoyo: true,
+                repeat: -1
+            });
+
+        });
+</script>
+
+</main>

@@ -1,0 +1,99 @@
+<main>
+  <span class="d-block p-2 bg-dark text-info">> Welcome {{user.name}}</span>
+  <div class="btn-group" role="group" aria-label="Basic example">
+  <a href="/perfil">  <button type="button" class="btn btn-secondary">Perfil</button></a>
+  <a href="/adCurso">  <button type="button" class="btn btn-secondary">Adicionar Curso</button></a>
+  <a href="profCursos">  <button type="button" class="btn btn-secondary">Editar/Remover Curso</button></a>
+  <a href="/duvidas">  <button type="button" class="btn btn-secondary">Dúvidas</button></a>
+  </div>
+    <div id="mainFrame" style="margin:auto; background-color:grey; hight:70%; width:70%;">
+
+    </div>
+
+<form id="form_add_curso" action="/addcurso" method="post">
+  <form class="" action="index.html" method="post">
+
+  <div class="add_area">
+    <!-- Insere IMAGEM -->
+      <div class="add_img">
+    <img id="imgCurso" name="imagemCurso" src="{{imgCurso}}" height="100px" width="200px" class="pic">
+    <a href="/chooseImg"><button type="button" id="enviaImagem" class="btn btn-dark" name="button">Enviar Imagem</button></a>
+    <input type="submit" value="Concluir" id="btnConcluir" class="btn btn-warning" form="form_add_curso">
+        <div class="form-group text-light">
+          <label for="exampleFormControlFile1">Escolha a imagem para o curso: </label>
+          <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+      </div>
+            </form>
+<!-- Insere informacoes -->
+      <div class="add_info">
+
+              <table>
+                <tr>
+                  <td>
+                    <!-- _______ TYPE _________ -->
+                    <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Area</span>
+                      </div>
+                      <input type="text" name="areaCurso" class="form-control" aria-label="Small"  aria-describedby="inputGroup-sizing-sm" required>
+                    </div>
+                    <!-- ________ PRICE  ________ -->
+                    <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Preço</span>
+                      </div>
+                      <input type="text" name="precoCurso" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
+                    </div>
+                    <!-- _________ DESCRIPTION  ________ -->
+                    <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Descrição</span>
+                  </div>
+                  <input type="text" name="descCurso" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
+                </div>
+                  </td>
+                  <td>
+                    <!-- __________ HOURS  __________ -->
+                    <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-sm">Horas</span>
+                    </div>
+                    <input type="text" name="horasCurso" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
+                  </div>
+                    <!-- ___________ NAME  _________ -->
+                    <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-sm">Nome</span>
+                    </div>
+                    <input type="text" name="nomeCurso" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
+                  </div>
+                            <!-- __________ TEACHER  __________ -->
+                    <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-sm">Professor</span>
+                    </div>
+                    <input type="text" name="profCurso" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
+                  </div>
+                  </td>
+                </tr>
+              </table>
+                    </div>
+                  </form>
+
+            </div>
+  </div>
+
+</body>
+
+<script>
+$(document).ready(()=>{
+
+  $("#enviaImagem").click(function(){
+    document.getElementbyId("imgCurso").attr("src") = "";
+  });
+
+});
+</script>
+
+</main>

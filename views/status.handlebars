@@ -1,0 +1,24 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item">Status</li>
+  </ol>
+</nav>
+
+<main>
+    {{#if (equals type "unknown_user")}}
+        <h3>Ops! we found an error</h3>
+        <p>Sorry. We could not find user with id {{params.id}} in our records.</p>
+    {{/if}}
+    {{#if (equals type "user_add_error")}}
+        <h3>Ops! we found an error</h3>
+        <p>Sorry. We found a problem when saving the profile data. Please try again later.</p>
+    {{/if}}
+    {{#if (equals type "user_add_success")}}
+        <h3>Everything is OK</h3>
+        <p>New profile successfully added.</p>
+    {{/if}}
+    {{#if (equals type undefined)}}
+        <p>Sorry. We could not determine the source of this error. Admins have been notified.</p>
+    {{/if}}
+</main>
